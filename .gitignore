@@ -151,7 +151,9 @@ $RECYCLE.BIN
 
 
 
-packages/DynamicJson.1.2.0.0/Content/DynamicJson.cs
-packages/DynamicJson.1.2.0.0/DynamicJson.1.2.0.0.nupkg
-packages/DynamicJson.1.2.0.0/DynamicJson.1.2.0.0.nuspec
-packages/repositories.config
+# ====================================
+#  Ignore the WiX Installer
+# ====================================
+Mets_Editor_WiX_Installer/
+
+
