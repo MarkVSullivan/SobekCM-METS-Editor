@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Begin the XML for this input template -->
+<input_template
+  xmlns="http://digital.uflib.ufl.edu/metadata/sobekcm_template/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://digital.uflib.ufl.edu/metadata/sobekcm_template/
+		http://digital.uflib.ufl.edu/metadata/sobekcm_template/sobekcm_template.xsd">
+
+
+	<!-- Define the information about this input template -->
+	<name>Simplified Metadata Template</name>
+	<name language="spa">Plantilla</name>
+	<name language="fre">Calibre</name>
+	<notes>Simplified MODS/MARC template for the SobekCM METS Editor</notes>
+	<dateCreated>November 29, 2005</dateCreated>
+	<lastModified>November 6, 2010</lastModified>
+	<creator>Mark V Sullivan</creator>
+	<includeUserAsAuthor>false</includeUserAsAuthor>
+	<uploads>FILE_OR_URL</uploads>
+	<uploadMandatory>false</uploadMandatory>
+
+	<!-- This defines the inputs which are available for the user -->
+	<inputs>
+		<page>
+			<name language="eng">Source Document</name>
+			<name language="fre">Document de Source</name>
+			<name language="spa">Documento de Fuente</name>
+			<panel>
+				<name language="eng">Basic Information</name>
+				<name language="spa">Información Básica</name>
+				<name language="fre">Informations de Base</name>
+				<element type="Title" subtype="panel" mandatory="true" />
+				<element type="Type" mandatory="true" subtype="simple" />
+				<element type="Genre" subtype="complex" />
+				<element type="Format" subtype="simple" repeatable="false" />
+				<element type="Language" repeatable="true">
+					<element_data>
+						<source_xml>\Data\languages3way.xml</source_xml>
+					</element_data>
+				</element>
+			</panel>
+			<panel>
+				<name language="eng">Name Authorities</name>
+				<name language="spa">Autoridad de Nombre</name>
+				<name language="fre">Autorités du Nom</name>
+				<element type="Creator" subtype="simple" repeatable="true" />
+				<element type="Donor" subtype="simple" />
+			</panel>
+			<panel>
+				<name language="eng">Publication Details</name>
+				<name language="spa">Detalle de la publicación</name>
+				<name language="fre">Détail de la publication</name>
+				<element type="Publisher" subtype="simple" repeatable="true" />
+				<element type="Date" />
+				<element type="DateCopyrighted" />
+				<element type="Edition" />
+			</panel>
+		</page>
+		<page>
+			<name language="eng">Subjects and Keywords</name>
+			<name language="fre">Sujets et Mots-Clés</name>
+			<name language="spa">Temas y Palabaras Claves</name>
+			<panel>
+				<name language="eng">Subjects</name>
+				<name language="spa">Sujetos</name>
+				<name language="fre">Sujets</name>
+				<element type="Subject" subtype="complex" repeatable="true" />
+				<element type="Temporal" subtype="complex" />
+				<element type="Spatial" subtype="complex" repeatable="true" />
+			</panel>
+			<panel>
+				<name language="eng">Notes</name>
+				<name language="spa">Notas</name>
+				<name language="fre">Notes</name>
+				<element type="Abstract" subtype="complex" repeatable="true" />
+				<element type="Note" subtype="complex" repeatable="true" />
+			</panel>
+		</page>
+		<page>
+			<name language="eng">Record Information</name>
+			<name language="spa">Registro de Información</name>
+			<name language="fre">Enregistrer de l'information</name>
+			<panel>
+				<name language="eng">Internal Record</name>
+				<name language="spa">Interior Registro</name>
+				<name language="fre">Enregistrement Interne</name>
+				<element type="METS_ObjectID" />
+				<element type="RecordStatus" />
+				<element type="CreatorNotes" />
+				<element type="RecordOrigin" />
+				<element type="DescriptionStandard" />
+				<element type="Source" subtype="complex" />
+				<element type="Holding" subtype="complex" />
+				<element type="Rights" />
+			</panel>
+			<panel>
+				<name language="eng">External Records</name>
+				<name language="spa">Registro Externo</name>
+				<name language="fre">Enregistrement Externe</name>
+				<element type="Classification" repeatable="true" />
+				<element type="Identifier" subtype="complex" repeatable="true" />
+				<element type="SerialHierarchy" />
+				<element type="EAD" />
+				<element type="OtherURL" />
+				<element type="RelatedItem" repeatable="true" />
+			</panel>
+		</page>
+	</inputs>
+</input_template>
+<!-- End of input template XML -->

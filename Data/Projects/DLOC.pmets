@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--  Project level metadata for 'DLOC' ( Project ) -->
+<METS:mets OBJID="DLOC"
+  xmlns:METS="http://www.loc.gov/METS/"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:mods="http://www.loc.gov/mods/v3"
+  xmlns:sobekcm="http://digital.uflib.ufl.edu/metadata/sobekcm/"
+  xsi:schemaLocation="http://www.loc.gov/METS/
+    http://www.loc.gov/standards/mets/mets.xsd
+    http://www.loc.gov/mods/v3
+    http://www.loc.gov/mods/v3/mods-3-4.xsd
+    http://digital.uflib.ufl.edu/metadata/sobekcm/
+    http://digital.uflib.ufl.edu/metadata/sobekcm/sobekcm.xsd">
+<METS:metsHdr CREATEDATE="2006-08-31T10:28:14Z" ID="DLOC" LASTMODDATE="2013-07-07T11:04:20Z" RECORDSTATUS="NEW">
+<METS:agent OTHERTYPE="SOFTWARE" ROLE="CREATOR" TYPE="OTHER"> 
+<METS:name>UFDC Metadata Template</METS:name>
+</METS:agent>
+<METS:agent ROLE="CREATOR" TYPE="INDIVIDUAL"> 
+<METS:name>MARKDESKTOP\Mark</METS:name>
+</METS:agent>
+</METS:metsHdr>
+<METS:dmdSec ID="DMD1">
+<METS:mdWrap MDTYPE="MODS"  MIMETYPE="text/xml" LABEL="MODS Metadata">
+<METS:xmlData>
+<mods:mods>
+<mods:accessCondition type="restrictions on use" displayLabel="Rights">All applicable rights reserved by the source institution.</mods:accessCondition>
+<mods:genre authority="sobekcm">project</mods:genre>
+<mods:note type="funding">Digitized with funding from the Digital Library of the Caribbean grant awarded by TICFIA.</mods:note>
+<mods:recordInfo>
+<mods:recordIdentifier source="sobekcm">DLOC_</mods:recordIdentifier>
+</mods:recordInfo>
+<mods:subject>
+<mods:topic>Caribbean</mods:topic>
+</mods:subject>
+<mods:titleInfo>
+<mods:title>Project level metadata for 'DLOC'</mods:title>
+</mods:titleInfo>
+</mods:mods>
+</METS:xmlData>
+</METS:mdWrap>
+</METS:dmdSec>
+<METS:dmdSec ID="DMD2">
+<METS:mdWrap MDTYPE="OTHER"  OTHERMDTYPE="SOBEKCM" MIMETYPE="text/xml" LABEL="SobekCM Custom Metadata">
+<METS:xmlData>
+<sobekcm:procParam>
+</sobekcm:procParam>
+<sobekcm:bibDesc>
+<sobekcm:BibID>DLOC</sobekcm:BibID>
+</sobekcm:bibDesc>
+</METS:xmlData>
+</METS:mdWrap>
+</METS:dmdSec>
+<METS:structMap ID="STRUCT1" > <METS:div /> </METS:structMap>
+</METS:mets>

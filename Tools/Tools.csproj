@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46F511D4-F038-4E39-8499-41A2CC6DC16D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>DLC_Tools</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DLC.Tools</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\DLC_Tools.XML</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>bin\Debug\DLC_Tools.XML</DocumentationFile>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>DLC_Tools.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\DLLs\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\Database_dLOC.cs" />
+    <Compile Include="Database\Database_Exception.cs" />
+    <Compile Include="Database\Database_Gateway.cs" />
+    <Compile Include="Database\Database_SQL.cs" />
+    <Compile Include="Database\iDatabase.cs" />
+    <Compile Include="FDA\FDA_Report_Data.cs" />
+    <Compile Include="FDA\FDA_Report_Reader.cs" />
+    <Compile Include="FDA\FDA_Report_Writer.cs" />
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CD_Packer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileMD5.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileSHA1.cs" />
+    <Compile Include="Forms\ErrorMessageBox.cs" />
+    <Compile Include="Forms\ErrorMessageBox_Internal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorMessageBox_Internal.Designer.cs">
+      <DependentUpon>ErrorMessageBox_Internal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IO\Connected_Drives.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\CS_TrackingDB_Tiny.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\DirectoryCrawler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\DirectoryCrawler_File.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\DirectoryCrawler_FileCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\DirectoryCrawler_UserDefinedCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\myDriveInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\myDriveInfo_Collection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\Volume_Folders.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\Volume_Folder_Info.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\Volume_Folder_Info_Collection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IO\Recursive_Folder_Actioner.cs" />
+    <Compile Include="Settings\Image_Derivative_Creation_Specs.cs" />
+    <Compile Include="Settings\IS_UserSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Language\Preferred_Language.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logs\LogFileText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logs\LogFileXHTML.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logs\LogFile_Exception.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RemarkedDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\App_Config_Reader.cs" />
+    <Compile Include="Settings\Division_Types_Errors_Reader.cs" />
+    <Compile Include="Settings\Division_Types_Errors_Table.cs" />
+    <Compile Include="Settings\DLC_UserSettings.cs" />
+    <Compile Include="Settings\Image_Division_Type_Table.cs" />
+    <Compile Include="StartUp\SecurityInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StartUp\SingleProgramInstance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StartUp\VersionChecker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StartUp\VersionConfigSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TiffInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows_Appearance_Checker.cs" />
+    <EmbeddedResource Include="Forms\ErrorMessageBox_Internal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ErrorMessageBox_Internal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemarkedDataSet.resx">
+      <DependentUpon>RemarkedDataSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

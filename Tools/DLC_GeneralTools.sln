@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLC_GeneralTools", "DLC_GeneralTools.csproj", "{46F511D4-F038-4E39-8499-41A2CC6DC16D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{46F511D4-F038-4E39-8499-41A2CC6DC16D}.Debug.ActiveCfg = Debug|.NET
+		{46F511D4-F038-4E39-8499-41A2CC6DC16D}.Debug.Build.0 = Debug|.NET
+		{46F511D4-F038-4E39-8499-41A2CC6DC16D}.Release.ActiveCfg = Release|.NET
+		{46F511D4-F038-4E39-8499-41A2CC6DC16D}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

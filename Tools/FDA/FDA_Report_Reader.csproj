@@ -1,0 +1,217 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF84E376-6EAD-4B33-BDB9-ABE8BD537688}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FDA_Report_Reader</RootNamespace>
+    <AssemblyName>FDA_Report_Reader</AssemblyName>
+    <ApplicationIcon>WRENCH.ICO</ApplicationIcon>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\FDA_Database_Gateway.cs" />
+    <Compile Include="Database\FDA_Database_XML.cs" />
+    <Compile Include="Database\iFDA_Database.cs" />
+    <Compile Include="Forms\FDA_FTP_By_Day_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FDA_FTP_By_Day_Form.Designer.cs">
+      <DependentUpon>FDA_FTP_By_Day_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FDA_FTP_Log_Report_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FDA_FTP_Log_Report_Form.Designer.cs">
+      <DependentUpon>FDA_FTP_Log_Report_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDA_Report_Processor.cs" />
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTP\FTP_Connect_Info_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTP\FTP_Connect_Info_Form.designer.cs">
+      <DependentUpon>FTP_Connect_Info_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTP\FDA_FTP_Processor.cs" />
+    <Compile Include="FTP\FTPconnect.cs" />
+    <Compile Include="FTP\SecurityInfo.cs" />
+    <Compile Include="Forms\Get_Package_ID_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Get_Package_ID_Form.Designer.cs">
+      <DependentUpon>Get_Package_ID_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTP\FTP_Status_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTP\FTP_Status_Form.Designer.cs">
+      <DependentUpon>FTP_Status_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Get_Date_Range_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Get_Date_Range_Form.Designer.cs">
+      <DependentUpon>Get_Date_Range_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FDA_UserSettings.cs" />
+    <Compile Include="Database\FDA_Database_SQL.cs" />
+    <Compile Include="FDA_Report_Data.cs" />
+    <Compile Include="FDA_Report_Reader.cs" />
+    <Compile Include="FDA_Report_Writer.cs" />
+    <Compile Include="Settings\IS_UserSettings.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FDA_FTP_By_Day_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FDA_FTP_By_Day_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FDA_FTP_Log_Report_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FDA_FTP_Log_Report_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTP\FTP_Connect_Info_Form.resx">
+      <DependentUpon>FTP_Connect_Info_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Get_Package_ID_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Get_Package_ID_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTP\FTP_Status_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FTP_Status_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Get_Date_Range_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Get_Date_Range_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result_Grid_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Result_Grid_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Single_File_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Single_File_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Single_Report_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Single_Report_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\Result_Grid_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Result_Grid_Form.Designer.cs">
+      <DependentUpon>Result_Grid_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Single_File_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Single_File_Form.Designer.cs">
+      <DependentUpon>Single_File_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Single_Report_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Single_Report_Form.Designer.cs">
+      <DependentUpon>Single_Report_Form.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Custom_Grid\Custom_Grid.csproj">
+      <Project>{ED8243CD-8AC3-4B52-B19E-EEF304D0E7BB}</Project>
+      <Name>Custom_Grid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{46F511D4-F038-4E39-8499-41A2CC6DC16D}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WRENCH.ICO" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

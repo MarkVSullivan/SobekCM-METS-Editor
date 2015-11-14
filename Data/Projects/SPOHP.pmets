@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--  Project level metadata for 'SPOHP' ( Project ) -->
+<METS:mets OBJID="SPOHP"
+  xmlns:METS="http://www.loc.gov/METS/"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:mods="http://www.loc.gov/mods/v3"
+  xmlns:sobekcm="http://digital.uflib.ufl.edu/metadata/sobekcm/"
+  xsi:schemaLocation="http://www.loc.gov/METS/
+    http://www.loc.gov/standards/mets/mets.xsd
+    http://www.loc.gov/mods/v3
+    http://www.loc.gov/mods/v3/mods-3-4.xsd
+    http://digital.uflib.ufl.edu/metadata/sobekcm/
+    http://digital.uflib.ufl.edu/metadata/sobekcm/sobekcm.xsd">
+<METS:metsHdr CREATEDATE="2006-08-31T10:28:14Z" ID="SPOHP" LASTMODDATE="2013-07-07T11:05:14Z" RECORDSTATUS="NEW">
+<METS:agent OTHERTYPE="SOFTWARE" ROLE="CREATOR" TYPE="OTHER"> 
+<METS:name>UFDC Metadata Template</METS:name>
+</METS:agent>
+<METS:agent ROLE="CREATOR" TYPE="INDIVIDUAL"> 
+<METS:name>LAPTOPXPS\Mark</METS:name>
+</METS:agent>
+</METS:metsHdr>
+<METS:dmdSec ID="DMD1">
+<METS:mdWrap MDTYPE="MODS"  MIMETYPE="text/xml" LABEL="MODS Metadata">
+<METS:xmlData>
+<mods:mods>
+<mods:accessCondition>All rights reserved by the source institution.</mods:accessCondition>
+<mods:genre authority="sobekcm">project</mods:genre>
+<mods:language>
+<mods:languageTerm type="text">English</mods:languageTerm>
+<mods:languageTerm type="code" authority="iso639-2b">eng</mods:languageTerm>
+</mods:language>
+<mods:note type="default type">Archival</mods:note>
+<mods:note type="funding">Oral history digitized with assistance from the Samual Proctor Oral History Project at the University of Florida.</mods:note>
+<mods:recordInfo>
+<mods:recordIdentifier source="sobekcm">SPOHP_</mods:recordIdentifier>
+</mods:recordInfo>
+<mods:relatedItem type="original">
+<mods:physicalDescription>
+<mods:extent>Interview</mods:extent>
+</mods:physicalDescription>
+</mods:relatedItem>
+<mods:subject authority="None">
+<mods:topic>Oral History</mods:topic>
+</mods:subject>
+<mods:subject>
+<mods:hierarchicalGeographic>
+<mods:continent>North America</mods:continent>
+<mods:country>United States of America</mods:country>
+<mods:state>Florida</mods:state>
+<mods:county>Alachua County</mods:county>
+<mods:city>Gainesville</mods:city>
+</mods:hierarchicalGeographic>
+</mods:subject>
+<mods:titleInfo>
+<mods:title>Project level metadata for 'SPOHP'</mods:title>
+</mods:titleInfo>
+</mods:mods>
+</METS:xmlData>
+</METS:mdWrap>
+</METS:dmdSec>
+<METS:dmdSec ID="DMD2">
+<METS:mdWrap MDTYPE="OTHER"  OTHERMDTYPE="SOBEKCM" MIMETYPE="text/xml" LABEL="SobekCM Custom Metadata">
+<METS:xmlData>
+<sobekcm:procParam>
+</sobekcm:procParam>
+<sobekcm:bibDesc>
+<sobekcm:BibID>SPOHP</sobekcm:BibID>
+</sobekcm:bibDesc>
+</METS:xmlData>
+</METS:mdWrap>
+</METS:dmdSec>
+<METS:structMap ID="STRUCT1" > <METS:div /> </METS:structMap>
+</METS:mets>

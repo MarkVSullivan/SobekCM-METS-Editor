@@ -1,0 +1,1280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B27F01C3-FBC3-4293-8D9E-E4A3B24CDA17}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>MetaData Template</AssemblyKeyContainerName>
+    <AssemblyName>SobekCM_METS_Editor</AssemblyName>
+    <AssemblyOriginatorKeyFile>MetaTemplate.exe</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SobekCM.METS_Editor</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>MetaTemplate.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>MetaTemplate.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GemBox.Spreadsheet, Version=33.3.30.1049, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Custom_Grid\Custom_Grid.csproj">
+      <Project>{ED8243CD-8AC3-4B52-B19E-EEF304D0E7BB}</Project>
+      <Name>Custom_Grid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SobekCM_Resource_Object\SobekCM_Resource_Object.csproj">
+      <Project>{395c2621-ce19-41e0-aa1a-abdb37f6e815}</Project>
+      <Name>SobekCM_Resource_Object</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{46F511D4-F038-4E39-8499-41A2CC6DC16D}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Content Include="App.ico" />
+    <None Include="Resources\large_question_mark.jpg" />
+    <None Include="Resources\help_button1.jpg" />
+    <None Include="Resources\UF-Signature-Themeline.gif" />
+    <None Include="Resources\mets_wordmark.gif" />
+    <None Include="Resources\UF.gif" />
+    <Compile Include="About\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About\About_dLOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOns\AddOn_Info.cs" />
+    <Compile Include="BatchImport\Forms\Batch_Import_Directory_Traverse_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchImport\Forms\Batch_Import_Directory_Traverse_Form.Designer.cs">
+      <DependentUpon>Batch_Import_Directory_Traverse_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchImport\Forms\DataGridPrinter.cs" />
+    <Compile Include="BatchImport\Forms\MARC_Importer\MARC_Importer_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchImport\Forms\Matching_Record_Dialog_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchImport\Forms\Matching_Record_Dialog_Form.designer.cs">
+      <DependentUpon>Matching_Record_Dialog_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchImport\Forms\Results_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchImport\Forms\Select_Material_Type_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchImport\Forms\Select_Material_Type_Form.designer.cs">
+      <DependentUpon>Select_Material_Type_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchImport\Forms\Select_Projects_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchImport\Forms\Select_Projects_Form.designer.cs">
+      <DependentUpon>Select_Projects_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchImport\Forms\SpreadSheet_Importer\DataGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchImport\Forms\SpreadSheet_Importer\DataGridForm.Designer.cs">
+      <DependentUpon>DataGridForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchImport\Forms\SpreadSheet_Importer\SpreadSheet_Importer_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchImport\Forms\SpreadSheet_Importer\SpreadSheet_Importer_Form.Designer.cs">
+      <DependentUpon>SpreadSheet_Importer_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchImport\Importer_Report.cs" />
+    <Compile Include="BatchImport\Processors\baseImporter_Processor.cs" />
+    <Compile Include="BatchImport\Processors\Batch_Directory_Processor.cs" />
+    <Compile Include="BatchImport\Processors\iImporter_Process.cs" />
+    <Compile Include="BatchImport\Processors\MARC_Importer_Processor.cs" />
+    <Compile Include="BatchImport\Processors\SpreadSheet_Importer_Processor.cs" />
+    <Compile Include="BatchImport\User Controls\Column_Assignment_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BatchImport\User Controls\Column_Assignment_Control.designer.cs">
+      <DependentUpon>Column_Assignment_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchImport\User Controls\Constant_Assignment_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BatchImport\User Controls\Constant_Assignment_Control.Designer.cs">
+      <DependentUpon>Constant_Assignment_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchImport\User Controls\Reader\Column_Field_Map.cs" />
+    <Compile Include="BatchImport\User Controls\Reader\Column_Field_Mapper.cs" />
+    <Compile Include="BatchImport\User Controls\Reader\Constant_Fields.cs" />
+    <Compile Include="BatchImport\User Controls\Reader\Constant_Field_Data.cs" />
+    <Compile Include="BatchImport\User Controls\Reader\ExcelBibliographicReader.cs" />
+    <Compile Include="BatchImport\User Controls\Reader\iBibliographicReader.cs" />
+    <Compile Include="Elements\base types\multiple_textBox_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Abstract_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Affiliation_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Coordinate_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Donor_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\EAD_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Hierarchical_Geography_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Main_Title_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Manufacturer_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Material_Type_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Name_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Note_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Other_Title_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Other_URL_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Publisher_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Related_Item_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Serial_Hierarchy_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\form elements\Subject_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Classification_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Related_Item_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\SobekCM_Aggregations_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Contributor_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Creator_Notes_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Date_Copyrighted_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Description_Standard_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Edition_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Encoding_Level_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ETD_CommitteeChair.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ETD_CommitteeCoChair.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ETD_CommitteeMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ETD_Degree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ETD_DegreeDiscipline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ETD_DegreeGrantor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ETD_DegreeLevel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ETD_GraduationDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\FDA_Account_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\FDA_Project_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\FDA_SubAccount_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Frequency_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\METS_ObjectID_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Other_Title_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Publication_Place_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Publication_Status_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Record_Origin_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Source_Note_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Target_Audience_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\VRA_CulturalContext_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\VRA_Inscription_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\VRA_Materials_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\VRA_Measurement_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\VRA_StateEdition_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\VRA_StylePeriod_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\VRA_Technique_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\SobekCM_Wordmark_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\RecordStatus_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ZT_Class.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ZT_Common_Name.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ZT_Family.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ZT_Genus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ZT_Higher_Classification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ZT_Kingdom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ZT_Order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ZT_Phylum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ZT_Scientific_Name.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ZT_SpecificEpithet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\ZT_Taxonomic_Rank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\nonstandard elements\BitmapCursor.cs" />
+    <Compile Include="Elements\nonstandard elements\Coordinates_Elements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\nonstandard elements\DragDropTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Elements\nonstandard elements\FCLA_Flags_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\nonstandard elements\Note_Complex_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\nonstandard elements\Structure_Map_Element_Helper.cs" />
+    <Compile Include="Elements\nonstandard elements\Title_Panel_Form_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\nonstandard elements\SobekCM_Viewer_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure_Map_Add_File_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure_Map_Add_File_Form.Designer.cs">
+      <DependentUpon>Structure_Map_Add_File_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure_Map_Add_Remote_File_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure_Map_Add_Remote_File_Form.Designer.cs">
+      <DependentUpon>Structure_Map_Add_Remote_File_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure_Map_Checksum_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure_Map_Checksum_Form.Designer.cs">
+      <DependentUpon>Structure_Map_Checksum_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Structure_Map_Outer_Divisions_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Structure_Map_Outer_Divisions_Form.Designer.cs">
+      <DependentUpon>Structure_Map_Outer_Divisions_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Z3950_Endpoint_Admin_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Z3950_Endpoint_Admin_Form.Designer.cs">
+      <DependentUpon>Z3950_Endpoint_Admin_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Z3950_Endpoint_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Z3950_Endpoint_Form.Designer.cs">
+      <DependentUpon>Z3950_Endpoint_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Z3950_Endpoint_Save_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Z3950_Endpoint_Save_Dialog.Designer.cs">
+      <DependentUpon>Z3950_Endpoint_Save_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Z3950_Import_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Z3950_Import_Form.Designer.cs">
+      <DependentUpon>Z3950_Import_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Metadata_Profile_Configurer.cs" />
+    <Compile Include="Template\Existing_Page_Images_Found_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\Existing_Page_Images_Found_Dialog.Designer.cs">
+      <DependentUpon>Existing_Page_Images_Found_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_FDA_Constants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_FDA_Constants.Designer.cs">
+      <DependentUpon>First_Launch_FDA_Constants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Form1.Designer.cs">
+      <DependentUpon>First_Launch_Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Form2.Designer.cs">
+      <DependentUpon>First_Launch_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Form3.Designer.cs">
+      <DependentUpon>First_Launch_Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Form5.Designer.cs">
+      <DependentUpon>First_Launch_Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Form6.Designer.cs">
+      <DependentUpon>First_Launch_Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_SobekCM_Constants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_SobekCM_Constants.Designer.cs">
+      <DependentUpon>First_Launch_SobekCM_Constants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Welcome.Designer.cs">
+      <DependentUpon>First_Launch_Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Abstract_Note_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Abstract_Note_Form.Designer.cs">
+      <DependentUpon>Abstract_Note_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Affiliation_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Affiliation_Form.Designer.cs">
+      <DependentUpon>Affiliation_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ColoredTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\ColoredTextBox.Designer.cs">
+      <DependentUpon>ColoredTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Coordinates_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coordinates_Form.Designer.cs">
+      <DependentUpon>Coordinates_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Degrees_Minutes_Seconds_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Degrees_Minutes_Seconds_Form.Designer.cs">
+      <DependentUpon>Degrees_Minutes_Seconds_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Division_Name_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EAD_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EAD_Form.Designer.cs">
+      <DependentUpon>EAD_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hierarchical_Geographic_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hierarchical_Geographic_Form.Designer.cs">
+      <DependentUpon>Hierarchical_Geographic_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Material_Details_Book_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Material_Details_Book_Form.Designer.cs">
+      <DependentUpon>Material_Details_Book_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Material_Details_Continuing_Materials_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Material_Details_Continuing_Materials_Form.Designer.cs">
+      <DependentUpon>Material_Details_Continuing_Materials_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Material_Details_Maps_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Material_Details_Maps_Form.Designer.cs">
+      <DependentUpon>Material_Details_Maps_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Material_Details_Other_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Material_Details_Other_Form.Designer.cs">
+      <DependentUpon>Material_Details_Other_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Material_Details_Visual_Material_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Material_Details_Visual_Material_Form.Designer.cs">
+      <DependentUpon>Material_Details_Visual_Material_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Name_Info_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Name_Info_Form.Designer.cs">
+      <DependentUpon>Name_Info_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Other_URL_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Other_URL_Form.Designer.cs">
+      <DependentUpon>Other_URL_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Page_Name_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Page_Name_Form.Designer.cs">
+      <DependentUpon>Page_Name_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Publisher_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Publisher_Form.Designer.cs">
+      <DependentUpon>Publisher_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Related_Item_Simple_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Related_Item_Simple_Form.Designer.cs">
+      <DependentUpon>Related_Item_Simple_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Round_Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Round_Button.Designer.cs">
+      <DependentUpon>Round_Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Serial_Hierarchy_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Serial_Hierarchy_Form.Designer.cs">
+      <DependentUpon>Serial_Hierarchy_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Subject_Info_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Subject_Info_Form.Designer.cs">
+      <DependentUpon>Subject_Info_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Title_Info_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Title_Info_Form.Designer.cs">
+      <DependentUpon>Title_Info_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help\abstract_HelpProvider.cs" />
+    <Compile Include="Help\SobekCM_HelpProvider.cs" />
+    <Compile Include="ImageDerivative\ImageMagick_Location_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageDerivative\ImageMagick_Location_Form.Designer.cs">
+      <DependentUpon>ImageMagick_Location_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageDerivative\Image_Derivative_Creation_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageDerivative\Image_Derivative_Creation_Form.Designer.cs">
+      <DependentUpon>Image_Derivative_Creation_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageDerivative\Multiple_Folders_Processor.cs" />
+    <Compile Include="FirstLaunch\First_Launch_Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstLaunch\First_Launch_Form4.Designer.cs">
+      <DependentUpon>First_Launch_Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OAI\Enter_OAI_Repository_URL_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OAI\Enter_OAI_Repository_URL_Form.Designer.cs">
+      <DependentUpon>Enter_OAI_Repository_URL_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OAI\OAI_PMH_Importer_Processor.cs" />
+    <Compile Include="OAI\OAI_PMH_Record_Import_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OAI\OAI_PMH_Record_Import_Form.Designer.cs">
+      <DependentUpon>OAI_PMH_Record_Import_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OAI\Repository_Details_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OAI\Repository_Details_Form.Designer.cs">
+      <DependentUpon>Repository_Details_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Institution_Controlled_List_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Institution_Controlled_List_Form.Designer.cs">
+      <DependentUpon>Institution_Controlled_List_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Institution_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Institution_Form.Designer.cs">
+      <DependentUpon>Institution_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Material_Type_Controlled_List_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Material_Type_Controlled_List_Form.Designer.cs">
+      <DependentUpon>Material_Type_Controlled_List_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Material_Type_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Material_Type_Form.Designer.cs">
+      <DependentUpon>Material_Type_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Material_Type_Setting.cs" />
+    <Compile Include="Settings\Preferences_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Preferences_Form.Designer.cs">
+      <DependentUpon>Preferences_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="METS\Show_MARC_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="METS\Show_MARC_Form.Designer.cs">
+      <DependentUpon>Show_MARC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="METS\Show_XML_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="METS\Show_XML_Form.Designer.cs">
+      <DependentUpon>Show_XML_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\RecordStatus_Controlled_List_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\RecordStatus_Controlled_List_Form.Designer.cs">
+      <DependentUpon>RecordStatus_Controlled_List_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\RecordStatus_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\RecordStatus_Form.Designer.cs">
+      <DependentUpon>RecordStatus_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show_Unanalyzed_METS_Sections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show_Unanalyzed_METS_Sections.Designer.cs">
+      <DependentUpon>Show_Unanalyzed_METS_Sections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Existing_Subdirectories_Found_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\Existing_Subdirectories_Found_Dialog.Designer.cs">
+      <DependentUpon>Existing_Subdirectories_Found_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\New_Project_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\New_Project_Form.Designer.cs">
+      <DependentUpon>New_Project_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Other_Files_Detected_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\Other_Files_Detected_Form.Designer.cs">
+      <DependentUpon>Other_Files_Detected_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Progress_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress_Form.Designer.cs">
+      <DependentUpon>Progress_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Roman_Numeral_Counter.cs" />
+    <Compile Include="Settings\App_Config_Reader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\abstract_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\base types\checkBox_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\base types\codeStatement_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\base types\comboBox_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\base types\keywordScheme_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\base types\simpleTextBox_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\Element_Collection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\Element_Factory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\Element_Type.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\iElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Abstract_Summary_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Attribution_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\BibId_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Creator_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Date_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Note_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Donor_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Format_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Genre_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Holding_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Identifier_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\SobekCM_Web_Skin_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Language_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\SobekCM_Main_Thumbnail_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\PALMM_Code_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Publisher_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Rights_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Scale_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Source_Institution_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Spatial_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Subject_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Temporal_Simple_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Title_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\Type_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\implemented elements\VID_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\nonstandard elements\Abstract_Complex_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\nonstandard elements\Structure_Map_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\nonstandard elements\Temporal_Complex_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\nonstandard elements\Title_Panel_Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Elements\simpleTextBox_SubElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Messages\EnglishMessageProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messages\FrenchMessageProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messages\iMessageProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messages\MessageProvider_Gateway.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messages\SpanishMessageProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools\Division_Types_Errors_Reader.cs" />
+    <Compile Include="Tools\Division_Types_Errors_Table.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\MetaTemplate_UserSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="METS\XML_Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StartUp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Template.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Template_Creator.cs" />
+    <Compile Include="Template\Template_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\Template_Language.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Template_Page.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Template_Page_Collection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Template_Panel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Template_Panel_Collection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Template\Template_XML_Reader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="About\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About\About_dLOC.resx">
+      <DependentUpon>About_dLOC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchImport\Forms\Batch_Import_Directory_Traverse_Form.resx">
+      <DependentUpon>Batch_Import_Directory_Traverse_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchImport\Forms\MARC_Importer\MARC_Importer_Form.resx">
+      <DependentUpon>MARC_Importer_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchImport\Forms\Matching_Record_Dialog_Form.resx">
+      <DependentUpon>Matching_Record_Dialog_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchImport\Forms\Results_Form.resx">
+      <DependentUpon>Results_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchImport\Forms\Select_Material_Type_Form.resx">
+      <DependentUpon>Select_Material_Type_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchImport\Forms\Select_Projects_Form.resx">
+      <DependentUpon>Select_Projects_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchImport\Forms\SpreadSheet_Importer\DataGridForm.resx">
+      <DependentUpon>DataGridForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchImport\Forms\SpreadSheet_Importer\SpreadSheet_Importer_Form.resx">
+      <DependentUpon>SpreadSheet_Importer_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchImport\User Controls\Column_Assignment_Control.resx">
+      <DependentUpon>Column_Assignment_Control.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchImport\User Controls\Constant_Assignment_Control.resx">
+      <DependentUpon>Constant_Assignment_Control.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elements\abstract_Element.resx">
+      <DependentUpon>abstract_Element.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure_Map_Add_File_Form.resx">
+      <DependentUpon>Structure_Map_Add_File_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure_Map_Add_Remote_File_Form.resx">
+      <DependentUpon>Structure_Map_Add_Remote_File_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure_Map_Checksum_Form.resx">
+      <DependentUpon>Structure_Map_Checksum_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structure_Map_Outer_Divisions_Form.resx">
+      <DependentUpon>Structure_Map_Outer_Divisions_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Z3950_Endpoint_Admin_Form.resx">
+      <DependentUpon>Z3950_Endpoint_Admin_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Z3950_Endpoint_Form.resx">
+      <DependentUpon>Z3950_Endpoint_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Z3950_Endpoint_Save_Dialog.resx">
+      <DependentUpon>Z3950_Endpoint_Save_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Z3950_Import_Form.resx">
+      <DependentUpon>Z3950_Import_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\Existing_Page_Images_Found_Dialog.resx">
+      <DependentUpon>Existing_Page_Images_Found_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstLaunch\First_Launch_FDA_Constants.resx">
+      <DependentUpon>First_Launch_FDA_Constants.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstLaunch\First_Launch_Form1.resx">
+      <DependentUpon>First_Launch_Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstLaunch\First_Launch_Form2.resx">
+      <DependentUpon>First_Launch_Form2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstLaunch\First_Launch_Form3.resx">
+      <DependentUpon>First_Launch_Form3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstLaunch\First_Launch_Form5.resx">
+      <DependentUpon>First_Launch_Form5.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstLaunch\First_Launch_Form6.resx">
+      <DependentUpon>First_Launch_Form6.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstLaunch\First_Launch_SobekCM_Constants.resx">
+      <DependentUpon>First_Launch_SobekCM_Constants.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstLaunch\First_Launch_Welcome.resx">
+      <DependentUpon>First_Launch_Welcome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Abstract_Note_Form.resx">
+      <DependentUpon>Abstract_Note_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Affiliation_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Affiliation_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coordinates_Form.resx">
+      <DependentUpon>Coordinates_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Degrees_Minutes_Seconds_Form.resx">
+      <DependentUpon>Degrees_Minutes_Seconds_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Division_Name_Form.resx">
+      <DependentUpon>Division_Name_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EAD_Form.resx">
+      <DependentUpon>EAD_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hierarchical_Geographic_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Hierarchical_Geographic_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Material_Details_Book_Form.resx">
+      <DependentUpon>Material_Details_Book_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Material_Details_Continuing_Materials_Form.resx">
+      <DependentUpon>Material_Details_Continuing_Materials_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Material_Details_Maps_Form.resx">
+      <DependentUpon>Material_Details_Maps_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Material_Details_Other_Form.resx">
+      <DependentUpon>Material_Details_Other_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Material_Details_Visual_Material_Form.resx">
+      <DependentUpon>Material_Details_Visual_Material_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Name_Info_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Name_Info_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other_URL_Form.resx">
+      <DependentUpon>Other_URL_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Page_Name_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Page_Name_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Publisher_Form.resx">
+      <DependentUpon>Publisher_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Related_Item_Simple_Form.resx">
+      <DependentUpon>Related_Item_Simple_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Round_Button.resx">
+      <DependentUpon>Round_Button.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Serial_Hierarchy_Form.resx">
+      <DependentUpon>Serial_Hierarchy_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Subject_Info_Form.resx">
+      <DependentUpon>Subject_Info_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Title_Info_Form.resx">
+      <DependentUpon>Title_Info_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageDerivative\ImageMagick_Location_Form.resx">
+      <DependentUpon>ImageMagick_Location_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageDerivative\Image_Derivative_Creation_Form.resx">
+      <DependentUpon>Image_Derivative_Creation_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstLaunch\First_Launch_Form4.resx">
+      <DependentUpon>First_Launch_Form4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OAI\Enter_OAI_Repository_URL_Form.resx">
+      <DependentUpon>Enter_OAI_Repository_URL_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OAI\OAI_PMH_Record_Import_Form.resx">
+      <DependentUpon>OAI_PMH_Record_Import_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OAI\Repository_Details_Form.resx">
+      <DependentUpon>Repository_Details_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Institution_Controlled_List_Form.resx">
+      <DependentUpon>Institution_Controlled_List_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Institution_Form.resx">
+      <DependentUpon>Institution_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Material_Type_Controlled_List_Form.resx">
+      <DependentUpon>Material_Type_Controlled_List_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Material_Type_Form.resx">
+      <DependentUpon>Material_Type_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Preferences_Form.resx">
+      <DependentUpon>Preferences_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="METS\Show_MARC_Form.resx">
+      <DependentUpon>Show_MARC_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="METS\Show_XML_Form.resx">
+      <DependentUpon>Show_XML_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\RecordStatus_Controlled_List_Form.resx">
+      <DependentUpon>RecordStatus_Controlled_List_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\RecordStatus_Form.resx">
+      <DependentUpon>RecordStatus_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_Unanalyzed_METS_Sections.resx">
+      <DependentUpon>Show_Unanalyzed_METS_Sections.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\Existing_Subdirectories_Found_Dialog.resx">
+      <DependentUpon>Existing_Subdirectories_Found_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\New_Project_Form.resx">
+      <DependentUpon>New_Project_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\Other_Files_Detected_Form.resx">
+      <DependentUpon>Other_Files_Detected_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress_Form.resx">
+      <DependentUpon>Progress_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\Template_Form.resx">
+      <DependentUpon>Template_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
